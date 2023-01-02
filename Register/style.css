@@ -8,7 +8,7 @@ body {
   padding: 1em;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
-  color: #b9b9b9;
+  color: #000000;
   background-color: #e3e3e3;
 }
 h4 {
@@ -203,19 +203,19 @@ select option {
     -ms-flex-pack: center;
     text-align: center;
     border: none;
-    background-color: #57c2d3;
+    background-color: #87d5e2;
     color: #11101D;
     box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
   }
   .btn:active,
   .btn:focus{  
     background-color: #11101D;
-    color: #57c2d3;
+    color: #87d5e2;
     box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
   }
   .btn:hover{  
     background-color: #11101D;
-    color: #57c2d3;
+    color: #87d5e2;
     box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
   }
   

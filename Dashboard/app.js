@@ -1,11 +1,16 @@
 const express=require('express');
 const app = express();
 const path = require("path");
-const router = express.Router();
+const login = require("../login/app.js");
+// const router = express.Router();
+// app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'ejs');
 
-router.use(express.static(__dirname));
-router.get('/',function(req,res){
-    res.sendFile(path.join(__dirname+'/index.html'));
+app.use(express.static(__dirname));
+console.log(login.name);
+app.get('/',async(req,res)=>{
+    const user=await userName();
+    res.render(path.join(__dirname+'/index'),{message:user});
 });
-
-module.exports = router;
+console.log("hello")
+module.exports = app;

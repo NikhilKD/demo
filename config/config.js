@@ -7,7 +7,6 @@ const {
   sendEmailVerification
  } = require("firebase/auth");
 
-const firestore=require('firebase/firestore');
 
 const firebaseConfig = {
   apiKey: "AIzaSyA0NrL3k15_rk4hQV2Mj1Ejf49GkECuaoQ",
@@ -20,10 +19,6 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-// const db = firestore.getFirestore(app);
-// const User = firestore.collection(db,"Users");
-// module.exports ={User,firebase};
-
 const auth = getAuth();
 
 exports.addUser = (email, password) =>

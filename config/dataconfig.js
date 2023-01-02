@@ -1,4 +1,5 @@
 const firestore=require('firebase/firestore');
+const firebase = require('firebase/app');
 
 const firebaseConfig = {
   apiKey: "AIzaSyA0NrL3k15_rk4hQV2Mj1Ejf49GkECuaoQ",
@@ -10,7 +11,7 @@ const firebaseConfig = {
   measurementId: "G-NER9QNPQK4"
 };
 
-firebase.initializeApp(firebaseConfig);
+const app = firebase.initializeApp(firebaseConfig);
 const db = firestore.getFirestore(app);
-const User = firestore.collection(db,"Users");
-module.exports ={User,firebase};
+const User = firestore.collection(db,"nihlkd@gmail.com");
+module.exports =User;

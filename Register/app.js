@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const app = express();
 app.use(express.json());
 app.use(bodyParser.json());
+app.use(express.urlencoded());
 
 app.use(express.static(__dirname));
 
@@ -13,9 +14,6 @@ app.get('/',async(req,res)=>{
     res.render(path.join(__dirname+'/index'));
 });
 
-app.post('/submit',(req,res)=>{
-    console.log(req.body);
-})
 
 app.get("/", async (req, res) => {
     const querySnapshot = await firestore.getDocs(User);
@@ -24,9 +22,10 @@ app.get("/", async (req, res) => {
   });
 
 app.post("/create", async (req, res) => {
-    const data = req.body;
-    const docRef = await firestore.addDoc(User, {data});
-    res.send({ msg: "User Added" });
+    console.log(req.body);
+    // const data = req.body;
+    // const docRef = await firestore.addDoc(User, {data});
+    // res.send({ msg: "User Added" });
 });
 
 module.exports = app;

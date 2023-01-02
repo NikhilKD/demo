@@ -13,6 +13,10 @@ app.get('/',async(req,res)=>{
     res.render(path.join(__dirname+'/index'));
 });
 
+app.post('/submit',(req,res)=>{
+    console.log(req.body);
+})
+
 app.get("/", async (req, res) => {
     const querySnapshot = await firestore.getDocs(User);
     const list = querySnapshot .docs.map((doc) => ({ id: doc.id, ...doc.data() }));

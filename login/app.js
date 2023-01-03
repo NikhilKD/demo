@@ -1,9 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const register = require("../register/app");
 const dashboard=require("../dashboard/app");
-// const firestore=require("firebase/firestore");
 const userService = require("../config/config.js");
-// const app = express();
 const path = require("path");
 const router = express.Router();
 
@@ -18,12 +17,11 @@ router.post("/signup", async (req, res) => {
     const { email, password } = req.body;
     try {
       const user = await userService.addUser(email, password);
-      const user1= await userService.sendEmail();
-      res.json(user1);
+      // const user1= await userService.sendEmail();
       if(res.status(201)){
           console.log("login successful");
           name=email;
-          return res.redirect('/dashboard');
+          return res.redirect('/register');
       }
     } catch (err) {
       res.status(401).json({ error: err.message });
@@ -74,4 +72,3 @@ router.get('/',function(req,res){
     res.sendFile(path.join(__dirname+'/index.html'));
 });
 module.exports = {router,userName};
-// exports=router;

@@ -13,5 +13,5 @@ const firebaseConfig = {
 
 const app = firebase.initializeApp(firebaseConfig);
 const db = firestore.getFirestore(app);
-const User = firestore.collection(db,"nihlkd@gmail.com");
-module.exports =User;
+
+module.exports =db;

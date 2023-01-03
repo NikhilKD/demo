@@ -9,44 +9,28 @@
 
 </head>
 <body>
-    <form action="/register/submit" method="POST">
+    <form action="/register/create" method="post">
     <div class="row">
         <h4>Basic details</h4>
         <div class="input-group input-group-icon">
-            <input type="text" placeholder="Full Name" class="form-control"/>
+            <input type="text" name="name" placeholder="Full Name" class="form-control"/>
             <div class="input-icon"><i class="fa fa-user"></i></div>
         </div>
         <div class="input-group input-group-icon">
-            <input type="text" placeholder="Address"/>
+            <input type="text" name="address" placeholder="Address"/>
             <div class="input-icon"><i class="fa fa-envelope"></i></div>
         </div>
         <div class="input-group input-group-icon">
-            <input type="text" placeholder="City"/>
+            <input type="text" name="city" placeholder="City"/>
             <div class="input-icon"><i class="fa fa-key"></i></div>
         </div>
         <div class="input-group input-group-icon">
-            <input type="text" placeholder="State"/>
+            <input type="text" name="state" placeholder="State"/>
             <div class="input-icon"><i class="fa fa-envelope"></i></div>
         </div>
         <div class="input-group input-group-icon">
-            <input type="text" placeholder="Pincode"/>
+            <input type="text" name="pincode" placeholder="Pincode"/>
             <div class="input-icon"><i class="fa fa-key"></i></div>
-        </div>
-        </div>
-        <!-- <div class="row">
-        <div class="col-half">
-            <h4>Date of Birth</h4>
-            <div class="input-group">
-            <div class="col-third">
-                <input type="number" placeholder="DD"/>
-            </div>
-            <div class="col-third">
-                <input type="number" placeholder="MM"/>
-            </div>
-            <div class="col-third">
-                <input type="number" placeholder="YYYY"/>
-            </div>
-            </div>
         </div>
         <div class="col-half">
             <h4>Gender</h4>
@@ -61,27 +45,27 @@
         <div class="row">
             <h4>Personal Details</h4>
             <div class="input-group input-group-icon">
-                <input type="text" placeholder="Date of Birth"/>
+                <input type="text" name="dob" placeholder="Date of Birth"/>
                 <div class="input-icon"><i class="fa fa-key"></i></div>
             </div>
         </div>
         </div>
         <div class="row">
         <div class="input-group input-group-icon">
-            <input type="text" placeholder="Blood group"/>
+            <input type="text" name="blood_group" placeholder="Blood group"/>
             <div class="input-icon"><i class="fa fa-envelope"></i></div>
         </div>
         <div class="input-group input-group-icon">
-            <input type="text" placeholder="Aadhar Card Number"/>
+            <input type="text" name="adhaar" placeholder="Aadhar Card Number"/>
             <div class="input-icon"><i class="fa fa-credit-card"></i></div>
         </div>
         <div class="input-group input-group-icon">
-            <input type="text" placeholder="Family Members"/>
+            <input type="text" name="family_member" placeholder="Family Members"/>
             <div class="input-icon"><i class="fa fa-key"></i></div>
         </div>
         <div class="input-group input-group-icon">
             <div class="input-group input-group-icon">
-            <input type="text" placeholder="Job"/>
+            <input type="text" name="job" placeholder="Job"/>
             <div class="input-icon"><i class="fa fa-user"></i></div>
             </div>
         </div>
@@ -94,7 +78,7 @@
         </div>
         </div>
         <div class="action">
-            <button class="btn mt-4">Submit</button>
+            <button type="submit" class="btn mt-4">Submit</button>
         </div>
     </form>
 </body>
